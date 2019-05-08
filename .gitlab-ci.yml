@@ -1,0 +1,15 @@
+
+stages:
+  - resample
+  - featurize
+  - lagging
+  - joining
+  - labeled
+  
+k:1min:
+  stage: resample
+  script: python test.py
+  
+k:5min:
+  stage: resample
+  script: python test.py
