@@ -9,7 +9,11 @@ stages:
 k:1min:
   stage: resample
   script: python test.py
+  tags:
+    - iinumbers-shell
   
 k:5min:
   stage: resample
   script: python test.py
+  tags:
+    - iinumbers-shell
