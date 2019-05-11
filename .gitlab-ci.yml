@@ -17,3 +17,28 @@ k:5min:
   script: python test.py
   tags:
     - iinumbers-shell
+
+k:15min:
+  stage: resample
+  script: python test.py
+  tags:
+    - iinumbers-shell
+
+k:30min:
+  stage: resample
+  script: python test.py
+  tags:
+    - iinumbers-shell
+
+k:1hour:
+  stage: resample
+  script: python test.py
+  tags:
+    - iinumbers-shell
+
+sma:1min:
+  stage: featurize
+  script: python test.py
+  tags:
+    - iinumbers-shell
+
