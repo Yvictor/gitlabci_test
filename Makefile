@@ -1,5 +1,5 @@
 
-test: 
-  python test.py
+test:
+	python test.py
   
  
