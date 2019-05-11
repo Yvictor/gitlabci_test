@@ -13,6 +13,7 @@ stages:
 continues:TXF:
   stage: rawdata
   script: make test
+  when: manual
   <<: *runner_definition
   
 k:1min:
