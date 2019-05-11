@@ -1,3 +1,6 @@
+.runner_template: &runner_definition
+  tags: 
+    - iinumbers-shell
 
 stages:
   - rawdata
@@ -10,42 +13,35 @@ stages:
 continues:TXF:
   stage: rawdata
   script: python test.py
-  tags:
-    - iinumbers-shell
+  <<: *runner_definition
   
 k:1min:
   stage: resample
   script: python test.py
-  tags:
-    - iinumbers-shell
+  <<: *runner_definition
   
 k:5min:
   stage: resample
   script: python test.py
-  tags:
-    - iinumbers-shell
-
+  <<: *runner_definition
+  
 k:15min:
   stage: resample
   script: python test.py
-  tags:
-    - iinumbers-shell
-
+  <<: *runner_definition
+  
 k:30min:
   stage: resample
   script: python test.py
-  tags:
-    - iinumbers-shell
-
+  <<: *runner_definition
+  
 k:1hour:
   stage: resample
   script: python test.py
-  tags:
-    - iinumbers-shell
-
+  <<: *runner_definition
+  
 sma:1min:
   stage: featurize
   script: python test.py
-  tags:
-    - iinumbers-shell
-
+  <<: *runner_definition
+  
