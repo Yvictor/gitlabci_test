@@ -1,10 +1,17 @@
 
 stages:
+  - rawdata
   - resample
   - featurize
   - lagging
   - joining
   - labeled
+
+continues:TXF:
+  stage: rawdata
+  script: python test.py
+  tags:
+    - iinumbers-shell
   
 k:1min:
   stage: resample
